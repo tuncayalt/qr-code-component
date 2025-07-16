@@ -1,10 +1,18 @@
-.attribution { 
-    font-size: 11px; text-align: center; 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
-.attribution a {
-    color: hsl(228, 45%, 44%); 
+
+html {
+  font-size: 10px;
 }
+
 body {
+    box-sizing: border-box;
+    font-size: 1.6rem;
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     color: hsl(218, 44%, 22%);
@@ -15,31 +23,48 @@ body {
     height: 100vh;
 }
 .container {
-    max-width: 280px;
+    max-width: 31rem;
     margin: 0 auto;
-    padding: 20px;
+    padding: 1.5rem;
     text-align: center;
     background-color: hsl(0, 0%, 100%);
-    border-radius: 20px;
-    box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 2rem;
+    box-shadow: 0.1rem 0.1rem 0.5rem 0.2rem rgba(0, 0, 0, 0.1);
 }
+
+@media screen and (max-width: 23.44rem) {
+    .container {
+        width: calc(100% - 18vw);
+        max-width: 200rem;
+    }
+    .caption {
+        font-size: 6.2vw !important;
+    }
+    .text {
+        font-size: 4.2vw !important;
+    }
+}
+
 .qr-code {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 1rem;
 }
 .caption {
-    font-size: 1.5rem;
+    font-size: 2.4rem;
     font-weight: 700;
-    margin-top: 20px;
+    margin-top: 2rem;
 }
 .text {
-    font-size: 1rem;
+    font-size: 1.6rem;
     font-weight: 400;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: hsl(216, 15%, 48%);
 }
-@media screen and (max-width: 375px) {
-    .container {
-        width: 80%;
-        max-width: 3020px;
-        padding: 15px;
-    }
+
+.attribution { 
+    font-size: 1rem; text-align: center; 
+}
+.attribution a {
+    color: hsl(228, 45%, 44%); 
 }
